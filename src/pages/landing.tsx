@@ -5,9 +5,9 @@ import bgWebp from "../bg.webp";
 import HeadingContent from "components/headingContent";
 import CardList from "components/cardList";
 import BigCardList from "components/bigCardList";
-import RectCardItem from "components/rectCardItem";
 import RectCardList from "components/rectCardList";
 import DestinationMenu from "components/DestinationMenu";
+import Footer from "components/footer";
 
 const LIVE_EVERYWHERE_DATA = [
 	"Entire Homes",
@@ -48,6 +48,7 @@ const LandingPage: React.FunctionComponent = () => {
 			/>
 			<RectCardList />
 			<DestinationMenu />
+			<Footer />
 		</div>
 	);
 };
