@@ -12,6 +12,7 @@ const FormSearch: React.FunctionComponent = () => {
 			<Form>
 				<Form.Item>
 					<Input
+						style={{ borderRadius: "15px" }}
 						placeholder="Where are you going?"
 						prefix={<SearchOutlined />}
 					/>

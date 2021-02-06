@@ -1,4 +1,3 @@
-import "./App.css";
 import LandingPage from "./pages/landing";
 import "antd/dist/antd.css";
 
