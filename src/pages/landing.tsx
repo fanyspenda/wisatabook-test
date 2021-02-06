@@ -5,6 +5,8 @@ import bgWebp from "../bg.webp";
 import HeadingContent from "components/headingContent";
 import CardList from "components/cardList";
 import BigCardList from "components/bigCardList";
+import RectCardItem from "components/rectCardItem";
+import RectCardList from "components/rectCardList";
 
 const LIVE_EVERYWHERE_DATA = [
 	"Entire Homes",
@@ -24,14 +26,11 @@ const LandingPage: React.FunctionComponent = () => {
 	return (
 		<div>
 			<Notification />
-			<picture
+			<img
+				src={bgJpg}
 				className="absolute w-full"
 				style={{ left: "0", zIndex: -1 }}
-			>
-				<source srcSet={bgWebp} type="image/webp" />
-				<source srcSet={bgJpg} type="image/jpeg" />
-				<img src={bgJpg} />
-			</picture>
+			/>
 
 			<FormSearch />
 			<HeadingContent />
@@ -43,6 +42,7 @@ const LandingPage: React.FunctionComponent = () => {
 				title="Online experiences"
 				description="interactive activities you can do together, led by expert hosts"
 			/>
+			<RectCardList />
 		</div>
 	);
 };
