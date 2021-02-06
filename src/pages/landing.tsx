@@ -2,8 +2,9 @@ import FormSearch from "../components/formSearch";
 import Notification from "../components/notification";
 import bgJpg from "../bg.jpg";
 import bgWebp from "../bg.webp";
-import { Button } from "antd";
 import HeadingContent from "components/headingContent";
+import CardItem from "components/cardItem";
+import CardList from "components/cardList";
 
 export interface LandingPageProps {}
 
@@ -22,6 +23,7 @@ const LandingPage: React.FunctionComponent = () => {
 
 			<FormSearch />
 			<HeadingContent />
+			<CardList />
 		</div>
 	);
 };
