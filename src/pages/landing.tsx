@@ -5,6 +5,8 @@ import bgWebp from "../bg.webp";
 import HeadingContent from "components/headingContent";
 import CardItem from "components/cardItem";
 import CardList from "components/cardList";
+import BigCardItem from "components/bigCardItem";
+import BigCardList from "components/bigCardList";
 
 export interface LandingPageProps {}
 
@@ -24,6 +26,7 @@ const LandingPage: React.FunctionComponent = () => {
 			<FormSearch />
 			<HeadingContent />
 			<CardList />
+			<BigCardList title="Live anywhere" />
 		</div>
 	);
 };
