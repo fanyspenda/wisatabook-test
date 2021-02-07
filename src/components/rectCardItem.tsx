@@ -11,11 +11,14 @@ const RectCardItem: React.FunctionComponent<RectCardItemProps> = ({
 	title,
 }) => {
 	return (
-		<div className="pl-4">
-			<div className="max-h-36 w-52 pr-5 overflow-hidden flex flex-col justify-center rounded-2xl">
+		<div className="pl-4 md:pl-0 mx-2">
+			<div className="max-h-36 w-52 pr-5 overflow-hidden flex flex-col justify-center rounded-2xl md:hidden">
 				<Image width={210} src="error" fallback={defaultImageSrc} />
 			</div>
-			<text className="text-base font-bold mt-2">{title}</text>
+			<div className="max-h-80  overflow-hidden flex-col justify-center rounded-2xl hidden md:flex mb-2">
+				<Image width={480} src="error" fallback={defaultImageSrc} />
+			</div>
+			<text className="text-base font-bold">{title}</text>
 		</div>
 	);
 };

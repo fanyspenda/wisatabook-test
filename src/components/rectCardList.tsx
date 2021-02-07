@@ -10,7 +10,7 @@ const dataItems = [
 
 const RectCardList: React.FunctionComponent<RectCardListProps> = () => {
 	return (
-		<div className="flex flex-col mt-8">
+		<div className="flex flex-col mt-8 md:mx-28">
 			<text className="text-xl font-bold pl-4 mb-4">
 				Join Millions of hosts on Airbnb
 			</text>
