@@ -52,6 +52,62 @@ const OUTDOOR_DATA = [
 		destination: "lake George",
 		city: "New York",
 	},
+	{
+		destination: "Gatlinburg",
+		city: "Tennessee",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+	{
+		destination: "Gatlinburg",
+		city: "Tennessee",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
 ];
 
 const CABIN_DATA = [
@@ -85,6 +141,80 @@ const CABIN_DATA = [
 	},
 ];
 
+const BEACH_DATA = [
+	{
+		destination: "Gatlinburg",
+		city: "Tennessee",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+];
+
+const POPULAR_DATA = [
+	{
+		destination: "New York",
+		city: "New York",
+	},
+	{
+		destination: "Atlanta",
+		city: "Georgia",
+	},
+	{
+		destination: "Phoenix",
+		city: "Arizona",
+	},
+	{
+		destination: "Gatlinburg",
+		city: "Tennessee",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+	{
+		destination: "Pigeon Forge",
+		city: "Tennessee",
+	},
+	{
+		destination: "Big Bear Lake",
+		city: "California",
+	},
+	{
+		destination: "Lake Powell",
+		city: "United States",
+	},
+];
+
 const DestinationMenu: React.FunctionComponent = () => {
 	const [destinations, setDestinations] = useState(ART_CULTURE_DATA);
 	const [activeMenu, setActiveMenu] = useState("art");
@@ -97,10 +227,12 @@ const DestinationMenu: React.FunctionComponent = () => {
 		if (activeMenu === "art") setDestinations(ART_CULTURE_DATA);
 		else if (activeMenu === "outdoor") setDestinations(OUTDOOR_DATA);
 		else if (activeMenu === "cabin") setDestinations(CABIN_DATA);
+		else if (activeMenu === "beach") setDestinations(BEACH_DATA);
+		else setDestinations(POPULAR_DATA);
 	}, [activeMenu]);
 
 	return (
-		<div className="mt-10 ml-4">
+		<div className="mt-10 ml-4 md:mx-32">
 			<text className="text-xl font-bold">
 				Inspiration for future gateways
 			</text>
@@ -119,7 +251,7 @@ const DestinationMenu: React.FunctionComponent = () => {
 			</Menu>
 			<div className="flex flex-row flex-wrap text-base mt-4">
 				{destinations.map(({ destination, city }) => (
-					<div className="flex flex-col w-44 mb-6">
+					<div className="flex flex-col w-44 mb-6 md:w-80 md:mr-10">
 						<text>{destination}</text>
 						<text className="text-gray-400">{city}</text>
 					</div>
