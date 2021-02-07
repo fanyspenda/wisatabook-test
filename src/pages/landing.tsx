@@ -32,12 +32,15 @@ const LandingPage: React.FunctionComponent = () => {
 			<HeadingContent />
 			<CardList />
 			<BigCardList title="Live anywhere" data={LIVE_EVERYWHERE_DATA} />
-			<BigCardList
-				data={ONLINE_EXPERIENCES}
-				isDarkMode
-				title="Online experiences"
-				description="interactive activities you can do together, led by expert hosts"
-			/>
+			<div className="bg-black">
+				<BigCardList
+					data={ONLINE_EXPERIENCES}
+					isDarkMode
+					title="Online experiences"
+					description="interactive activities you can do together, led by expert hosts"
+				/>
+			</div>
+
 			<RectCardList />
 			<DestinationMenu />
 			<Footer />
