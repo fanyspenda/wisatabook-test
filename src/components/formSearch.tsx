@@ -12,7 +12,7 @@ const { Header } = Layout;
 const FormSearch: React.FunctionComponent = () => {
 	return (
 		<Layout
-			className="bg-transparent"
+			className="bg-transparent mt-8 md:mt-0"
 			style={{ background: "transparent" }}
 		>
 			<div className="hidden md:flex flex-row justify-around items-center bg-gradient-to-b from-gray-600 to-transparent mt-0 py-5">
