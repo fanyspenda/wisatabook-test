@@ -1,13 +1,13 @@
 import FormSearch from "../components/formSearch";
 import Notification from "../components/notification";
-import bgJpg from "../bg.jpg";
-import bgWebp from "../bg.webp";
+
 import HeadingContent from "components/headingContent";
 import CardList from "components/cardList";
 import BigCardList from "components/bigCardList";
 import RectCardList from "components/rectCardList";
 import DestinationMenu from "components/DestinationMenu";
 import Footer from "components/footer";
+import ImgBackground from "components/imgBackground";
 
 const LIVE_EVERYWHERE_DATA = [
 	"Entire Homes",
@@ -27,15 +27,7 @@ const LandingPage: React.FunctionComponent = () => {
 	return (
 		<div>
 			<Notification />
-			<picture
-				className="absolute w-full"
-				style={{ left: "0", zIndex: -1 }}
-			>
-				<source srcSet={bgWebp} type="image/webp" />
-				<source srcSet={bgJpg} type="image/jpeg" />
-				<img src={bgJpg} />
-			</picture>
-
+			<ImgBackground />
 			<FormSearch />
 			<HeadingContent />
 			<CardList />

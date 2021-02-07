@@ -22,7 +22,7 @@ const itemData = [
 const CardList: React.FunctionComponent = () => {
 	const [destinations, setDestinations] = useState(itemData);
 	return (
-		<div className="flex px-4 flex-col overflow-x-auto max-h-56 flex-wrap mt-60">
+		<div className="flex px-4 flex-col overflow-x-auto max-h-56 flex-wrap mt-56">
 			{destinations.map(({ name, duration }) => {
 				return <CardItem destination={name} duration={duration} />;
 			})}
