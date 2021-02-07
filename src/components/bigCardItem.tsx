@@ -28,7 +28,9 @@ const BigCardItem: React.FunctionComponent<bigCardItemProps> = ({ title }) => {
 				/>
 			</div>
 
-			<text className="text-base font-bold mt-2">{title}</text>
+			<text className="text-base font-bold mt-2 md:max-w-xs">
+				{title}
+			</text>
 		</div>
 	);
 };

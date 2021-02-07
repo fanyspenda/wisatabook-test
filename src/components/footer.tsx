@@ -5,8 +5,8 @@ export interface FooterProps {}
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
 	return (
-		<div className="bg-gray-100 flex flex-row flex-wrap pl-4 pt-6 pr-4 mt-4">
-			<div className="flex flex-col w-screen mb-6">
+		<div className="bg-gray-100 flex flex-row flex-wrap pl-4 pt-6 pr-4 mt-4 md:px-28">
+			<div className="flex flex-col w-screen mb-6 md:w-80 md:mr-10">
 				<text className="text-base font-bold mb-2">About</text>
 				<text className="mb-2">How Airbnb works</text>
 				<text className="mb-2">Newsroom</text>
@@ -17,11 +17,13 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
 				<text className="mb-2">Airbnb for Work</text>
 				<text className="mb-2">Olympics</text>
 				<text className="mb-2">Careers</text>
-				<Divider
-					style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
-				/>
+				<div className="md:hidden">
+					<Divider
+						style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
+					/>
+				</div>
 			</div>
-			<div className="flex flex-col w-screen mb-6">
+			<div className="flex flex-col w-screen mb-6 md:w-80 md:mr-10">
 				<text className="text-base font-bold mb-2">Community</text>
 				<text className="mb-2">Diversity & Belonging</text>
 				<text className="mb-2">Accessibility</text>
@@ -30,11 +32,13 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
 				<text className="mb-2">invite friends</text>
 				<text className="mb-2">Gift cards</text>
 				<text className="mb-2">Airbnb.org</text>
-				<Divider
-					style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
-				/>
+				<div className="md:hidden">
+					<Divider
+						style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
+					/>
+				</div>
 			</div>
-			<div className="flex flex-col w-screen mb-6">
+			<div className="flex flex-col w-screen mb-6 md:w-80 md:mr-10">
 				<text className="text-base font-bold mb-2">Host</text>
 				<text className="mb-2">Host your home</text>
 				<text className="mb-2">Host an Online Experience</text>
@@ -42,20 +46,24 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
 				<text className="mb-2">Responsible Hosting</text>
 				<text className="mb-2">Resource Center</text>
 				<text className="mb-2">Community Center</text>
-				<Divider
-					style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
-				/>
+				<div className="md:hidden">
+					<Divider
+						style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
+					/>
+				</div>
 			</div>
-			<div className="flex flex-col w-screen mb-6">
+			<div className="flex flex-col w-screen md:w-40 mb-6">
 				<text className="text-base font-bold mb-2">Support</text>
 				<text className="mb-2">Our COVID-19 Response</text>
 				<text className="mb-2">Help Center</text>
 				<text className="mb-2">Cancellation options</text>
 				<text className="mb-2">Neighborhood Support</text>
 				<text className="mb-2">Trust & Safety</text>
-				<Divider
-					style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
-				/>
+				<div className="md:hidden">
+					<Divider
+						style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
+					/>
+				</div>
 			</div>
 			<div className="flex flex-col w-screen mb-6">
 				<div className="flex flex-row font-bold">

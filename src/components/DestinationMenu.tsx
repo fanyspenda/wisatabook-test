@@ -232,7 +232,7 @@ const DestinationMenu: React.FunctionComponent = () => {
 	}, [activeMenu]);
 
 	return (
-		<div className="mt-10 ml-4 md:mx-32">
+		<div className="mt-10 ml-4 md:mx-28">
 			<text className="text-xl font-bold">
 				Inspiration for future gateways
 			</text>

@@ -11,7 +11,7 @@ const RectCardItem: React.FunctionComponent<RectCardItemProps> = ({
 	title,
 }) => {
 	return (
-		<div className="pl-4 md:pl-0 mx-2">
+		<div className="px-4 md:px-0 md:mx-4">
 			<div className="max-h-36 w-52 pr-5 overflow-hidden flex flex-col justify-center rounded-2xl md:hidden">
 				<Image width={210} src="error" fallback={defaultImageSrc} />
 			</div>

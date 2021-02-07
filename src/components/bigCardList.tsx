@@ -15,7 +15,7 @@ const BigCardList: React.FunctionComponent<BigCardListProps> = ({
 }) => {
 	return (
 		<div
-			className={`pt-8 pb-6 flex flex-col md:mx-28 ${
+			className={`pt-8 pb-6 flex flex-col md:mx-24 ${
 				isDarkMode && "bg-black text-white"
 			}`}
 		>
@@ -25,13 +25,13 @@ const BigCardList: React.FunctionComponent<BigCardListProps> = ({
 					<text className="mb-4">{description}</text>
 				</div>
 				{isDarkMode && (
-					<button className="border-gray-100 border-2 w-28 mr-9 rounded-lg hidden md:block">
+					<button className="border-gray-100 border-2 w-28 mr-5 rounded-lg hidden md:block">
 						Explore all
 					</button>
 				)}
 			</div>
 
-			<div className="overflow-x-auto flex flex-row md:justify-between ml-4">
+			<div className="overflow-x-auto flex flex-row md:justify-between pl-4">
 				{data.map((title) => (
 					<BigCardItem title={title} />
 				))}
