@@ -9,13 +9,25 @@ const defaultImageSrc =
 
 const BigCardItem: React.FunctionComponent<bigCardItemProps> = ({ title }) => {
 	return (
-		<div className="flex flex-col w-60 pr-5">
-			<Image
-				width={200}
-				src="error"
-				className="rounded-2xl"
-				fallback={defaultImageSrc}
-			/>
+		<div className="flex flex-col pr-5">
+			<div className="md:hidden">
+				<Image
+					width={200}
+					src="error"
+					className="rounded-2xl"
+					fallback={defaultImageSrc}
+				/>
+			</div>
+
+			<div className="hidden md:block">
+				<Image
+					width={350}
+					src="error"
+					className="rounded-2xl"
+					fallback={defaultImageSrc}
+				/>
+			</div>
+
 			<text className="text-base font-bold mt-2">{title}</text>
 		</div>
 	);
