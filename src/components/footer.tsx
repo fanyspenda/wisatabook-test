@@ -1,5 +1,11 @@
 import { Divider } from "antd";
-import { GlobalOutlined, DollarOutlined } from "@ant-design/icons";
+import {
+	GlobalOutlined,
+	DollarOutlined,
+	FacebookOutlined,
+	TwitterOutlined,
+	InstagramOutlined,
+} from "@ant-design/icons";
 
 export interface FooterProps {}
 
@@ -65,7 +71,14 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
 					/>
 				</div>
 			</div>
-			<div className="flex flex-col w-screen mb-6">
+
+			<div className="hidden md:block w-screen">
+				<Divider
+					style={{ border: "2px solid #e8e8e8", marginBottom: 0 }}
+				/>
+			</div>
+
+			<div className="flex flex-col md:flex-row-reverse md:justify-between md:items-center w-screen mb-6">
 				<div className="flex flex-row font-bold">
 					<div className="flex items-baseline w-32">
 						<GlobalOutlined />
@@ -75,18 +88,26 @@ const Footer: React.FunctionComponent<FooterProps> = () => {
 						<DollarOutlined />
 						<text className="ml-2 underline">USD</text>
 					</div>
+					<div className="hidden md:block w-32">
+						<FacebookOutlined className="mx-2 text-xl" />
+						<TwitterOutlined className="mx-2 text-xl" />
+						<InstagramOutlined className="mx-2 text-xl" />
+					</div>
 				</div>
 
-				<text className="mt-4">
-					© 2021 Airbbb, Inc. All rights reserved
-				</text>
+				<div className="mt-4 md:flex md:flex-row">
+					<text className="mb-2 mr-4">
+						© 2021 Airbbb, Inc. All rights reserved
+					</text>
+					<text className="mb-2 mr-4">&middot;</text>
 
-				<div>
-					<text className="mb-2 mr-4">Privacy</text>
-					<text className="mb-2 mr-4">&middot;</text>
-					<text className="mb-2 mr-4">Terms</text>
-					<text className="mb-2 mr-4">&middot;</text>
-					<text className="mb-2 mr-4">Sitemap</text>
+					<div>
+						<text className="mb-2 mr-4">Privacy</text>
+						<text className="mb-2 mr-4">&middot;</text>
+						<text className="mb-2 mr-4">Terms</text>
+						<text className="mb-2 mr-4">&middot;</text>
+						<text className="mb-2 mr-4">Sitemap</text>
+					</div>
 				</div>
 			</div>
 		</div>
