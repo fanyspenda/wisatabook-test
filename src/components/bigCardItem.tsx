@@ -21,7 +21,7 @@ const BigCardItem: React.FunctionComponent<bigCardItemProps> = ({ title }) => {
 
 			<div className="hidden md:block">
 				<Image
-					width={350}
+					width={380}
 					src="error"
 					className="rounded-2xl"
 					fallback={defaultImageSrc}

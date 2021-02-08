@@ -15,7 +15,7 @@ const BigCardList: React.FunctionComponent<BigCardListProps> = ({
 }) => {
 	return (
 		<div
-			className={`pt-8 pb-6 flex flex-col md:mx-24 ${
+			className={`pt-8 pb-6 flex flex-col md:mx-32 ${
 				isDarkMode && "bg-black text-white"
 			}`}
 		>

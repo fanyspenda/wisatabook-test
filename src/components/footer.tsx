@@ -11,7 +11,7 @@ export interface FooterProps {}
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
 	return (
-		<div className="bg-gray-100 flex flex-row flex-wrap pl-4 pt-6 pr-4 mt-4 md:px-28">
+		<div className="bg-gray-100 flex flex-row flex-wrap pl-4 pt-6 pr-4 mt-4 md:px-36">
 			<div className="flex flex-col w-screen mb-6 md:w-80 md:mr-10">
 				<text className="text-base font-bold mb-2">About</text>
 				<text className="mb-2">How Airbnb works</text>

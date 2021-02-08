@@ -10,11 +10,11 @@ const dataItems = [
 
 const RectCardList: React.FunctionComponent<RectCardListProps> = () => {
 	return (
-		<div className="flex flex-col mt-8 md:mx-24">
+		<div className="flex flex-col mt-8 md:mx-32">
 			<text className="text-xl font-bold pl-4 mb-4">
 				Join Millions of hosts on Airbbb
 			</text>
-			<div className="flex flex-row overflow-x-auto">
+			<div className="flex flex-row overflow-x-auto md:justify-between">
 				{dataItems.map((title) => (
 					<RectCardItem title={title} />
 				))}
