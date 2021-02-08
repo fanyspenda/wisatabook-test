@@ -4,12 +4,31 @@ import {
 	GlobalOutlined,
 	UserOutlined,
 } from "@ant-design/icons";
+import SearchModal from "./searchModal";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 export interface FormSearchProps {}
 
 const { Header } = Layout;
 
 const FormSearch: React.FunctionComponent = () => {
+	const [searchKey, setSearchKey] = useState<string>("default value");
+	const [isVisible, setIsVisible] = useState<boolean>(false);
+	const handleFormSubmit = (values: { keyword: string }) => {
+		setSearchKey(values.keyword);
+	};
+
+	const firstLoad = useRef(true);
+	useEffect(() => {
+		if (firstLoad.current) {
+			firstLoad.current = false;
+			return;
+		}
+
+		console.log(searchKey);
+		setIsVisible(true);
+	}, [searchKey]);
+
 	return (
 		<Layout
 			className="bg-transparent mt-8 md:mt-0"
@@ -31,8 +50,8 @@ const FormSearch: React.FunctionComponent = () => {
 				</div>
 			</div>
 			<div className="px-3 md:px-96">
-				<Form>
-					<Form.Item>
+				<Form onFinish={handleFormSubmit}>
+					<Form.Item name="keyword">
 						<Input
 							style={{
 								borderRadius: "15px",
@@ -44,6 +63,12 @@ const FormSearch: React.FunctionComponent = () => {
 					</Form.Item>
 				</Form>
 			</div>
+			<SearchModal
+				handleCancel={setIsVisible}
+				isVisible={isVisible}
+				searchKey={searchKey}
+				key={searchKey}
+			/>
 		</Layout>
 	);
 };
